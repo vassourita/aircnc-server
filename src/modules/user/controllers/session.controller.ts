@@ -1,16 +1,13 @@
-import { Controller, Param, Get, Body, Post, HttpException, HttpStatus, UnauthorizedException, NotFoundException } from '@nestjs/common';
-import { User } from '../entities/user.entity';
+import { Controller, Param, Get, Body, Post, UnauthorizedException, NotFoundException } from '@nestjs/common';
 import { UserService } from '../services/user.service';
 import { AuthService } from '../services/auth.service';
 import { ICreateSessionDTO } from '../dtos/create-session.dto';
-import { TokenService } from '../services/token.service';
 
 @Controller('/sessions')
 export class SessionController {
   constructor(
     private userService: UserService,
     private authService: AuthService,
-    private tokenService: TokenService
   ) { }
 
   @Post('/')
@@ -25,7 +22,7 @@ export class SessionController {
       throw new UnauthorizedException('Wrong password');
     }
 
-    const token = this.tokenService.generateToken(user.id);
+    const token = await this.authService.signToken(user.id);
 
     return { token };
   }

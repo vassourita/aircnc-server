@@ -1,3 +1,3 @@
-export interface TokenPayloadDTO {
+export interface ITokenPayloadDTO {
   id: string;
 }

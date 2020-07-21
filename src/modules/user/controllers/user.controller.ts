@@ -1,7 +1,8 @@
-import { Controller, Param, Get, Body, Post, NotFoundException, ConflictException, Delete } from '@nestjs/common';
+import { Controller, Param, Get, Body, Post, NotFoundException, ConflictException, Delete, ParseUUIDPipe, HttpStatus, UseGuards, Request, UnauthorizedException } from '@nestjs/common';
 import { User } from '../entities/user.entity';
 import { UserService } from '../services/user.service';
 import { AuthService } from '../services/auth.service';
+import { JwtAuthGuard } from '@shared/providers/token/jwt.guard';
 
 @Controller('/users')
 export class UserController {
@@ -17,7 +18,9 @@ export class UserController {
   }
 
   @Get('/:id')
-  async show(@Param('id') id: string): Promise<User> {
+  async show(
+    @Param('id', new ParseUUIDPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE })) id: string
+  ): Promise<User> {
     const user = await this.userService.findOneById(id);
 
     if (!user) {
@@ -41,8 +44,12 @@ export class UserController {
     return user;
   }
 
+  @UseGuards(JwtAuthGuard)
   @Delete('/:id')
-  async destroy(@Param('id') id: string): Promise<void> {
+  async destroy(@Param('id') id: string, @Request() req): Promise<void> {
+    if (req.user.id !== id) {
+      throw new UnauthorizedException('Unauthorized operation');
+    }
     await this.userService.remove(id);
   }
 }
