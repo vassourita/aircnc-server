@@ -2,7 +2,7 @@ import { Controller, Param, Get, Body, Post, NotFoundException, ConflictExceptio
 import { User } from '../entities/user.entity'
 import { UserService } from '../services/user.service'
 import { AuthService } from '../services/auth.service'
-import { JwtAuthGuard } from '@shared/providers/token/jwt.guard'
+import { JwtAuthGuard } from '@shared/providers/jwt/jwt.guard'
 import { Request as Req } from 'express'
 
 @Controller('/users')
