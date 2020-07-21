@@ -14,7 +14,7 @@ export class SpotService {
   findByTechs(techs: string[]): Promise<Spot[]> {
     return this.SpotsRepository
       .createQueryBuilder()
-      .where('profile.techs::text[] @> (:techs)::text[]', { techs })
+      .where('techs::text[] @> (:techs)::text[]', { techs })
       .getMany()
   }
 

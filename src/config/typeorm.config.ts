@@ -7,6 +7,7 @@ export const typeormConfig: TypeOrmModuleOptions = {
   username: 'docker',
   password: 'docker',
   database: 'aircnc',
+  logging: 'all',
   entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
   autoLoadEntities: true,
   synchronize: true

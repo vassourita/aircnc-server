@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne } from 'typeorm'
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, JoinColumn } from 'typeorm'
 import { User } from '@modules/user/entities/user.entity'
 
 @Entity('spots')
@@ -17,6 +17,9 @@ export class Spot {
 
   @Column('text', { array: true })
   techs: string[]
+
+  @JoinColumn({ name: 'user_id' })
+  userId: string
 
   @ManyToOne(() => User)
   user: User

@@ -3087,33 +3087,13 @@
         "affectsGlobalScope": false
       },
       "./src/config/typeorm.config.ts": {
-        "version": "928c1d7ebad33eea3fcb3864a7e25b4bf8c12888d73d91172f60bded6968f5f2",
+        "version": "4314c4b8d0a8bb66f2af17f6568b31e4fe68f71620a999bf6fc149bdd00b224f",
         "signature": "5d86921e9694979be25ad8bad5157ec741f0df155f2077952b2d147feabdb2ee",
         "affectsGlobalScope": false
       },
       "./src/shared/database/database.module.ts": {
         "version": "daa27f98d879111c9a6db0af74fab20227db1effcfdd5a8af2b8dedaf3a6fe71",
         "signature": "a7ad670f373dd5665c73c7dc09a8e28b976a63bd7ed08def7c1c13456e87d3dc",
-        "affectsGlobalScope": false
-      },
-      "./src/shared/app/app.module.ts": {
-        "version": "10e7b314ce473217ea8d2c87be8a740854cc16f25074808478168f2f8814a429",
-        "signature": "c5d8d8d09bab9c1856515cc770847e363c0b18db26dc3e48f4c5c883c9cff7ff",
-        "affectsGlobalScope": false
-      },
-      "./src/main.ts": {
-        "version": "1b953db117078435f29adf6bb776ab4418880f0be768e333373cae78611c48f1",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "./src/@types/express.d.ts": {
-        "version": "e16ba0df24a0c7095df2d82f4e29fa12bfb4a6cb70a5bcb5e5e52319db4f385b",
-        "signature": "e16ba0df24a0c7095df2d82f4e29fa12bfb4a6cb70a5bcb5e5e52319db4f385b",
-        "affectsGlobalScope": true
-      },
-      "./src/config/upload.config.ts": {
-        "version": "96f7476ab9461e547ebb1847b614839a236c93497bf53f8a99166e778cee43c3",
-        "signature": "3c79e48434c4219d77a2a284400449377f7a867ed0d83f43e7bccb5c95197ed8",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": {
@@ -3197,8 +3177,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/spot/entities/spot.entity.ts": {
-        "version": "677f7876970585c5110ac0124bc488a9c9853804bac19e8b68b9b1ce53cd840c",
-        "signature": "69eb1d66052faaea3f3bc713cacd237c6bff70f8732ce3a565007ac341733043",
+        "version": "252cd0a55673bea54fa14dc78a85a227be9038284bccd4da1bca3d3e8fd866b6",
+        "signature": "93527c6076c0c8a1c321af4aee8185be3b28c7906f5334cee46c927effb470d4",
         "affectsGlobalScope": false
       },
       "./src/modules/spot/dtos/create-spot.dto.ts": {
@@ -3207,19 +3187,49 @@
         "affectsGlobalScope": false
       },
       "./src/modules/spot/services/spot.service.ts": {
-        "version": "dd2a2c088e66d1c4736bedb33ff2a5f077e8db294f8e35001dbf7d603212de66",
+        "version": "d13345187c1d15a4d660e18e5f830e2c927f02668006b47b96d57065fdfbcb1d",
         "signature": "43b7321be45c9b3663bb71463d86ddbcff0dda8873d72461d844328d6cf90ae1",
         "affectsGlobalScope": false
       },
+      "./src/modules/spot/dtos/parse-spot-techs.dto.ts": {
+        "version": "110eae284fb4dcc281ef2a98d9a1b22d6f4721340b1f5e2d18a1459073e8660e",
+        "signature": "b9c39c5bfc9a16bd89917ba96bdb97a129ef894ef796b48457d7cc60c1831ede",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/spot/pipes/parse-spot-techs.pipe.ts": {
+        "version": "d1211579677920cdbbe88a723194c23a4bf508d8672a9250085b5f2f1f1c6285",
+        "signature": "c98645447d89e2059ff3f184f6f29df6af3afc3ece8b53b36bbe8c5e8263cf60",
+        "affectsGlobalScope": false
+      },
       "./src/modules/spot/controllers/spot.controller.ts": {
-        "version": "4aa01e0c546cf8d3956cc25c3ff977766f1ce30a6307ae83af1fc2b40b29bf52",
-        "signature": "90543553bf90698f246d30afb176abf3cdcfaaeb15d435e90027c45a266217f9",
+        "version": "1c07508a4b1cfb9bd7b61e9d060c133a6965cc9505e937077ace9c0537a96ad0",
+        "signature": "cba7501330542058155b17f9992008133a44845d7a0dcfac4af08c172ab22d9d",
+        "affectsGlobalScope": false
+      },
+      "./src/config/upload.config.ts": {
+        "version": "96f7476ab9461e547ebb1847b614839a236c93497bf53f8a99166e778cee43c3",
+        "signature": "3c79e48434c4219d77a2a284400449377f7a867ed0d83f43e7bccb5c95197ed8",
         "affectsGlobalScope": false
       },
       "./src/modules/spot/spot.module.ts": {
         "version": "3afc478373110de16cd74c6489149fb891c6cad810920fcd39ac455d5dbae17e",
         "signature": "35da4e955264a042acf4561abdfd2c10aafd786d193196dc55f1c646ed428982",
         "affectsGlobalScope": false
+      },
+      "./src/shared/app/app.module.ts": {
+        "version": "d8a70aaeaf8fb1d0078cd3d8903714f2d6cf92b88748ff14220d7706e861c962",
+        "signature": "c5d8d8d09bab9c1856515cc770847e363c0b18db26dc3e48f4c5c883c9cff7ff",
+        "affectsGlobalScope": false
+      },
+      "./src/main.ts": {
+        "version": "1b953db117078435f29adf6bb776ab4418880f0be768e333373cae78611c48f1",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "./src/@types/express.d.ts": {
+        "version": "e16ba0df24a0c7095df2d82f4e29fa12bfb4a6cb70a5bcb5e5e52319db4f385b",
+        "signature": "e16ba0df24a0c7095df2d82f4e29fa12bfb4a6cb70a5bcb5e5e52319db4f385b",
+        "affectsGlobalScope": true
       },
       "./node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -3345,6 +3355,11 @@
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "affectsGlobalScope": false
+      },
+      "./node_modules/@types/multer/index.d.ts": {
+        "version": "ffdb9b58af06a526dce72c2216121e2c57fc53f9fa01848c932addb04800fbd2",
+        "signature": "ffdb9b58af06a526dce72c2216121e2c57fc53f9fa01848c932addb04800fbd2",
+        "affectsGlobalScope": true
       },
       "./node_modules/@types/normalize-package-data/index.d.ts": {
         "version": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613",
@@ -5658,6 +5673,15 @@
         "./node_modules/@types/node/ts3.2/fs.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/ts3.7/index.d.ts",
+        "./node_modules/@types/node/util.d.ts"
+      ],
+      "./node_modules/@types/multer/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/stream.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts"
       ],
       "./node_modules/@types/node/async_hooks.d.ts": [
@@ -9667,16 +9691,26 @@
       "./src/modules/spot/controllers/spot.controller.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/platform-express/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.2/fs.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./src/modules/spot/entities/spot.entity.ts",
+        "./src/modules/spot/pipes/parse-spot-techs.pipe.ts",
         "./src/modules/spot/services/spot.service.ts",
         "./src/shared/providers/jwt/jwt.guard.ts"
       ],
       "./src/modules/spot/dtos/create-spot.dto.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./src/modules/spot/entities/spot.entity.ts"
+      ],
+      "./src/modules/spot/dtos/parse-spot-techs.dto.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.2/fs.d.ts",
@@ -9692,6 +9726,15 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/typeorm/index.d.ts",
         "./src/modules/user/entities/user.entity.ts"
+      ],
+      "./src/modules/spot/pipes/parse-spot-techs.pipe.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./src/modules/spot/dtos/parse-spot-techs.dto.ts"
       ],
       "./src/modules/spot/services/spot.service.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
@@ -9827,6 +9870,7 @@
         "./node_modules/@types/node/ts3.2/fs.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts",
+        "./src/modules/spot/spot.module.ts",
         "./src/modules/user/user.module.ts",
         "./src/shared/database/database.module.ts"
       ],
@@ -12056,6 +12100,15 @@
         "./node_modules/@types/node/ts3.2/fs.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/ts3.7/index.d.ts",
+        "./node_modules/@types/node/util.d.ts"
+      ],
+      "./node_modules/@types/multer/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/stream.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts"
       ],
       "./node_modules/@types/node/async_hooks.d.ts": [
@@ -16035,13 +16088,22 @@
         "./node_modules/@nestjs/typeorm/index.d.ts"
       ],
       "./src/modules/spot/controllers/spot.controller.ts": [
+        "./node_modules/@types/express/index.d.ts",
         "./src/modules/spot/entities/spot.entity.ts",
         "./src/modules/spot/services/spot.service.ts"
       ],
       "./src/modules/spot/dtos/create-spot.dto.ts": [
         "./src/modules/spot/entities/spot.entity.ts"
       ],
+      "./src/modules/spot/dtos/parse-spot-techs.dto.ts": [
+        "./src/modules/spot/entities/spot.entity.ts"
+      ],
       "./src/modules/spot/entities/spot.entity.ts": [
+        "./src/modules/user/entities/user.entity.ts"
+      ],
+      "./src/modules/spot/pipes/parse-spot-techs.pipe.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./src/modules/spot/dtos/parse-spot-techs.dto.ts",
         "./src/modules/user/entities/user.entity.ts"
       ],
       "./src/modules/spot/services/spot.service.ts": [
@@ -16330,6 +16392,7 @@
       "./node_modules/@types/jsonwebtoken/index.d.ts",
       "./node_modules/@types/mime/index.d.ts",
       "./node_modules/@types/morgan/index.d.ts",
+      "./node_modules/@types/multer/index.d.ts",
       "./node_modules/@types/node/async_hooks.d.ts",
       "./node_modules/@types/node/base.d.ts",
       "./node_modules/@types/node/buffer.d.ts",
@@ -16755,7 +16818,9 @@
       "./src/main.ts",
       "./src/modules/spot/controllers/spot.controller.ts",
       "./src/modules/spot/dtos/create-spot.dto.ts",
+      "./src/modules/spot/dtos/parse-spot-techs.dto.ts",
       "./src/modules/spot/entities/spot.entity.ts",
+      "./src/modules/spot/pipes/parse-spot-techs.pipe.ts",
       "./src/modules/spot/services/spot.service.ts",
       "./src/modules/spot/spot.module.ts",
       "./src/modules/user/controllers/session.controller.ts",
