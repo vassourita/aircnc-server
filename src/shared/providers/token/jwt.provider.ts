@@ -1,8 +1,12 @@
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import { PassportStrategy } from '@nestjs/passport';
-import { Injectable } from '@nestjs/common';
-import { authConfig } from '@config/auth.config';
-import { ITokenPayloadDTO } from '@modules/user/dtos/token-payload.dto';
+import { ExtractJwt, Strategy } from 'passport-jwt'
+import { PassportStrategy } from '@nestjs/passport'
+import { Injectable } from '@nestjs/common'
+import { authConfig } from '@config/auth.config'
+import { ITokenPayloadDTO } from '@modules/user/dtos/token-payload.dto'
+
+interface IValidationResponse {
+  id: string
+}
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
@@ -10,11 +14,11 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
-      secretOrKey: authConfig.jwt.secret,
-    });
+      secretOrKey: authConfig.jwt.secret
+    })
   }
 
-  async validate(payload: ITokenPayloadDTO) {
-    return { id: payload.id };
+  async validate(payload: ITokenPayloadDTO): Promise<IValidationResponse> {
+    return { id: payload.id }
   }
 }

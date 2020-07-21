@@ -1,15 +1,15 @@
-import cors from 'cors';
-import helmet from 'helmet';
-import morgan from 'morgan';
-import { Module, NestModule, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
-import { UserModule } from '@modules/user/user.module';
-import { DatabaseModule } from '../database/database.module';
+import cors from 'cors'
+import helmet from 'helmet'
+import morgan from 'morgan'
+import { Module, NestModule, MiddlewareConsumer, RequestMethod } from '@nestjs/common'
+import { UserModule } from '@modules/user/user.module'
+import { DatabaseModule } from '../database/database.module'
 
 @Module({
-  imports: [UserModule, DatabaseModule],
+  imports: [UserModule, DatabaseModule]
 })
 export class AppModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
+  configure(consumer: MiddlewareConsumer): void {
     consumer
       .apply(
         cors(),

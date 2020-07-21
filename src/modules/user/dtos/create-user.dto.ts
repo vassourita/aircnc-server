@@ -1,3 +1,3 @@
-import { User } from "../entities/user.entity";
+import { User } from '../entities/user.entity'
 
-export interface ICreateUserDTO extends Omit<User, 'id' | 'createdAt'> { }
+export type ICreateUserDTO = Omit<User, 'id' | 'createdAt'>

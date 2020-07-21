@@ -1,4 +1,4 @@
-import { TypeOrmModuleOptions } from "@nestjs/typeorm"
+import { TypeOrmModuleOptions } from '@nestjs/typeorm'
 
 export const typeormConfig: TypeOrmModuleOptions = {
   type: 'postgres',
@@ -9,5 +9,5 @@ export const typeormConfig: TypeOrmModuleOptions = {
   database: 'aircnc',
   entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
   autoLoadEntities: true,
-  synchronize: true,
+  synchronize: true
 }
