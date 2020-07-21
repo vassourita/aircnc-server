@@ -1,0 +1,15 @@
+version: '3.0'
+
+services:
+  postgres:
+    container_name: postgres_docker_aircnc
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_USER: docker
+      POSTGRES_DB: aircnc
+    volumes:
+      - /var/lib/postgresql/data
