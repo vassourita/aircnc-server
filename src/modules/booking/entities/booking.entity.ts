@@ -11,17 +11,17 @@ export class Booking {
   @Column('timestamp')
   date: string
 
-  @Column('boolean')
+  @Column('boolean', { default: null })
   approved: boolean
 
-  @Column()
+  @Column('uuid')
   userId: string
 
-  @ManyToOne(() => User)
+  @ManyToOne(() => User, user => user.bookings)
   @JoinColumn({ name: 'userId' })
   user: User
 
-  @Column()
+  @Column('uuid')
   spotId: string
 
   @ManyToOne(() => Spot, spot => spot.bookings)

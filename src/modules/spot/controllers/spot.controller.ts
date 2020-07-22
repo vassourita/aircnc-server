@@ -33,10 +33,10 @@ export class SpotController {
     @Body(ParseSpotTechsPipe) model: Spot
   ): Promise<Spot> {
     const userId = request.user.id
-    model.user.id = userId
     const spot = await this.spotService.create({
       ...model,
-      thumbnail: file.filename
+      thumbnail: file.filename,
+      userId
     })
     return spot
   }

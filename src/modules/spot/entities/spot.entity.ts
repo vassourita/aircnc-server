@@ -20,7 +20,7 @@ export class Spot {
   @Column('text', { array: true })
   techs: string[]
 
-  @Column()
+  @Column('uuid')
   userId: string
 
   @ManyToOne(() => User, user => user.spots)
