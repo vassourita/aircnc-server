@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm'
 
+import { Booking } from '@modules/booking/entities/booking.entity'
 import { User } from '@modules/user/entities/user.entity'
 
 @Entity('spots')
@@ -19,12 +20,16 @@ export class Spot {
   @Column('text', { array: true })
   techs: string[]
 
-  @JoinColumn({ name: 'user_id' })
+  @Column()
   userId: string
 
-  @ManyToOne(() => User)
+  @ManyToOne(() => User, user => user.spots)
+  @JoinColumn({ name: 'userId' })
   user: User
 
-  @CreateDateColumn({ name: 'created_at' })
+  @OneToMany(() => Booking, booking => booking.spot)
+  bookings: Booking[]
+
+  @CreateDateColumn()
   createdAt: string
 }

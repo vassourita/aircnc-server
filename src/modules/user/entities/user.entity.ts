@@ -1,4 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm'
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, OneToMany } from 'typeorm'
+
+import { Spot } from '@modules/spot/entities/spot.entity'
 
 @Entity('users')
 export class User {
@@ -14,6 +16,9 @@ export class User {
   @Column()
   password: string
 
-  @CreateDateColumn({ name: 'created_at' })
+  @OneToMany(() => Spot, spot => spot.user)
+  spots: Spot[]
+
+  @CreateDateColumn()
   createdAt: string
 }
