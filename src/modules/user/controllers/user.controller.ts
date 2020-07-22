@@ -1,9 +1,12 @@
 import { Controller, Param, Get, Body, Post, NotFoundException, ConflictException, Delete, ParseUUIDPipe, HttpStatus, UseGuards, Request, UnauthorizedException } from '@nestjs/common'
-import { User } from '../entities/user.entity'
-import { UserService } from '../services/user.service'
-import { AuthService } from '../services/auth.service'
-import { JwtAuthGuard } from '@shared/providers/jwt/jwt.guard'
+
 import { Request as Req } from 'express'
+
+import { JwtAuthGuard } from '@shared/providers/jwt/jwt.guard'
+
+import { User } from '../entities/user.entity'
+import { AuthService } from '../services/auth.service'
+import { UserService } from '../services/user.service'
 
 @Controller('/users')
 export class UserController {

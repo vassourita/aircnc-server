@@ -1,7 +1,8 @@
 import { Controller, Body, Post, UnauthorizedException, NotFoundException } from '@nestjs/common'
-import { UserService } from '../services/user.service'
-import { AuthService } from '../services/auth.service'
+
 import { ICreateSessionDTO } from '../dtos/create-session.dto'
+import { AuthService } from '../services/auth.service'
+import { UserService } from '../services/user.service'
 
 @Controller('/sessions')
 export class SessionController {

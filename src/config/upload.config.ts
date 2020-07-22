@@ -1,6 +1,6 @@
+import { randomBytes } from 'crypto'
 import { diskStorage } from 'multer'
 import { extname } from 'path'
-import { randomBytes } from 'crypto'
 
 export const uploadConfig = {
   dir: `${__dirname}/../../tmp/uploads`,

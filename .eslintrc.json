@@ -17,7 +17,8 @@
   },
   "root": true,
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
   ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -26,6 +27,36 @@
     "@typescript-eslint/no-explicit-any": "off",
     "space-before-function-paren": "off",
     "no-useless-constructor": "off",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^@nest/",
+          "module",
+          [
+            "/^@shared/",
+            "/^@modules/",
+            "/^@config/"
+          ],
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ]
   }
 }

@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common'
-import { UserController } from './controllers/user.controller'
-import { SessionController } from './controllers/session.controller'
-import { UserService } from './services/user.service'
-import { AuthService } from './services/auth.service'
-import { TypeOrmModule } from '@nestjs/typeorm'
-import { User } from './entities/user.entity'
 import { JwtModule } from '@nestjs/jwt'
+import { TypeOrmModule } from '@nestjs/typeorm'
+
 import { authConfig } from '@config/auth.config'
 import { JwtStrategy } from '@shared/providers/jwt/jwt.provider'
+
+import { SessionController } from './controllers/session.controller'
+import { UserController } from './controllers/user.controller'
+import { User } from './entities/user.entity'
+import { AuthService } from './services/auth.service'
+import { UserService } from './services/user.service'
 
 @Module({
   imports: [

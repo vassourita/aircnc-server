@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, JoinColumn } from 'typeorm'
+
 import { User } from '@modules/user/entities/user.entity'
 
 @Entity('spots')

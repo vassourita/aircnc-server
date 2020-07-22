@@ -1,12 +1,15 @@
+import { Module, NestModule, MiddlewareConsumer, RequestMethod } from '@nestjs/common'
+import { ServeStaticModule } from '@nestjs/serve-static'
+
 import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
-import { Module, NestModule, MiddlewareConsumer, RequestMethod } from '@nestjs/common'
-import { ServeStaticModule } from '@nestjs/serve-static'
-import { UserModule } from '@modules/user/user.module'
-import { DatabaseModule } from '../database/database.module'
-import { SpotModule } from '@modules/spot/spot.module'
+
 import { uploadConfig } from '@config/upload.config'
+import { SpotModule } from '@modules/spot/spot.module'
+import { UserModule } from '@modules/user/user.module'
+
+import { DatabaseModule } from '../database/database.module'
 
 @Module({
   imports: [

@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core'
+
 import { AppModule } from './shared/app/app.module'
 
 async function main() {

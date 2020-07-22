@@ -1,8 +1,10 @@
-import { Repository } from 'typeorm'
 import { Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
-import { Spot } from '../entities/spot.entity'
+
+import { Repository } from 'typeorm'
+
 import { ICreateSpotDTO } from '../dtos/create-spot.dto'
+import { Spot } from '../entities/spot.entity'
 
 @Injectable()
 export class SpotService {

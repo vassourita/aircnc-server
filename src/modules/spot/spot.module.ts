@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common'
-import { TypeOrmModule } from '@nestjs/typeorm'
 import { JwtModule } from '@nestjs/jwt'
-import { authConfig } from '@config/auth.config'
-import { SpotController } from './controllers/spot.controller'
-import { SpotService } from './services/spot.service'
-import { Spot } from './entities/spot.entity'
-import { JwtStrategy } from '@shared/providers/jwt/jwt.provider'
 import { MulterModule } from '@nestjs/platform-express'
+import { TypeOrmModule } from '@nestjs/typeorm'
+
+import { authConfig } from '@config/auth.config'
 import { uploadConfig } from '@config/upload.config'
+import { JwtStrategy } from '@shared/providers/jwt/jwt.provider'
+
+import { SpotController } from './controllers/spot.controller'
+import { Spot } from './entities/spot.entity'
+import { SpotService } from './services/spot.service'
 
 @Module({
   imports: [

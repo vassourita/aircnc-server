@@ -1,10 +1,13 @@
 import { Controller, Get, Body, UseGuards, Post, UseInterceptors, UploadedFile, Request, Query } from '@nestjs/common'
 import { FileInterceptor } from '@nestjs/platform-express'
-import { Spot } from '../entities/spot.entity'
-import { SpotService } from '../services/spot.service'
-import { JwtAuthGuard } from '@shared/providers/jwt/jwt.guard'
+
 import { Request as Req } from 'express'
+
+import { JwtAuthGuard } from '@shared/providers/jwt/jwt.guard'
+
+import { Spot } from '../entities/spot.entity'
 import { ParseSpotTechsPipe } from '../pipes/parse-spot-techs.pipe'
+import { SpotService } from '../services/spot.service'
 
 @Controller('/spots')
 export class SpotController {

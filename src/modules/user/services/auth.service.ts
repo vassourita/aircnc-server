@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
+
 import { compare, hash } from 'bcryptjs'
+
 import { authConfig } from '@config/auth.config'
 
 @Injectable()
