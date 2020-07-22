@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="./public/logo.png" alt="Aircnc" width="120">
+  <img src="./public/aircnc.png" alt="Aircnc" width="120">
 <br>
 <br>
 </h1>
