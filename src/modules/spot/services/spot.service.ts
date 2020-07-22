@@ -8,19 +8,19 @@ import { ICreateSpotDTO } from '../dtos/create-spot.dto'
 export class SpotService {
   constructor(
     @InjectRepository(Spot)
-    private SpotsRepository: Repository<Spot>
+    private spotsRepository: Repository<Spot>
   ) { }
 
   findByTechs(techs: string[]): Promise<Spot[]> {
-    return this.SpotsRepository
+    return this.spotsRepository
       .createQueryBuilder()
-      .where('techs::text[] @> (:techs)::text[]', { techs })
+      .where('lower(techs::text)::text[] @> (lower(:techs::text)::text[])::text[]', { techs })
       .getMany()
   }
 
   async create(model: ICreateSpotDTO): Promise<Spot> {
-    const spot = this.SpotsRepository.create(model)
-    await this.SpotsRepository.save(spot)
+    const spot = this.spotsRepository.create(model)
+    await this.spotsRepository.save(spot)
     return spot
   }
 }

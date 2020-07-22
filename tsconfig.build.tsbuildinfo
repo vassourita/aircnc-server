@@ -3237,8 +3237,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/spot/services/spot.service.ts": {
-        "version": "d13345187c1d15a4d660e18e5f830e2c927f02668006b47b96d57065fdfbcb1d",
-        "signature": "43b7321be45c9b3663bb71463d86ddbcff0dda8873d72461d844328d6cf90ae1",
+        "version": "e7d16954bf5fffb68c109867be3851e8d451632855fe3ba327470a8439de6327",
+        "signature": "a4b2cba5a5c28a54c77c6dc83ae3e56a5c8e14647e173c143c01db741088e232",
         "affectsGlobalScope": false
       },
       "./src/modules/spot/dtos/parse-spot-techs.dto.ts": {
@@ -3277,7 +3277,7 @@
         "affectsGlobalScope": false
       },
       "./src/main.ts": {
-        "version": "1b953db117078435f29adf6bb776ab4418880f0be768e333373cae78611c48f1",
+        "version": "bc1f2bc14da4de64b24cd1b331decf8c0a7f109a1346447b9a352762bf26270d",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
