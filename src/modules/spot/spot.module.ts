@@ -14,7 +14,8 @@ import { uploadConfig } from '@config/upload.config'
     TypeOrmModule.forFeature([Spot]),
     JwtModule.register(authConfig.jwt),
     MulterModule.register({
-      dest: uploadConfig.dir
+      dest: uploadConfig.dir,
+      storage: uploadConfig.storage
     })
   ],
   controllers: [SpotController],
