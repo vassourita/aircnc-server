@@ -3116,18 +3116,33 @@
         "signature": "83b2209e6bc6cd97d19bddb920bc798c7a74fbc6ede0a027db044c146159adfa",
         "affectsGlobalScope": false
       },
+      "./src/modules/booking/dtos/update-booking.dto.ts": {
+        "version": "26acbccb0da1d952d64231f30f9f908fd8eed1829c06641a7d635aa5fa2f9f20",
+        "signature": "3a4f6dbba9d266c9475b5c107d5a305224cb5eebe5cdae9c15fd2025514a1f4c",
+        "affectsGlobalScope": false
+      },
       "./src/modules/booking/services/booking.service.ts": {
-        "version": "8e0ecd6b30e9923fd4f5ec3adfba8c13bbd981013c6cfae8616ed1a4748bd312",
-        "signature": "9571299250f92c6a7c3245cc48f72a860a734efe58bb412ef36c4ba83b7cd1f4",
+        "version": "e742f08bc449ae6fe0700ba2c9a13deb96e92546f724e74835e44ac80d97c7ef",
+        "signature": "2cf0262537cb499bd31efe532686256a1b46f80c3063d58827b66ed2688240ad",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/booking/controllers/approval.controller.ts": {
+        "version": "22bdab01cb56608ab982f8268a7e5a89dbf54d68868b373304f6709e38aacd2b",
+        "signature": "cbaca3a22da03c8efc54533be3f6c1759fa3d50f8d6941e4b35684c053a3273b",
         "affectsGlobalScope": false
       },
       "./src/modules/booking/controllers/booking.controller.ts": {
-        "version": "4c24d1c13e59eb1e5cf79e5340dc9c4a17ef98670a025328353a61b725c307b5",
-        "signature": "5f584465fa4e1fe86beb62de22fca1415bf636dbd807522f96a5c84f2eec5472",
+        "version": "766437451a5c5979eb6b6484fc7fa422d47492981346b343fea0b7a3d81e7cb2",
+        "signature": "d84af49577121397d60990b8daf76fc93db80a656c6581adf1b919787c803d88",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/booking/controllers/rejection.controller.ts": {
+        "version": "4844e3cc3718ddcbadcd6577604e87793dbcfb30a907ea59989dade82d9e7005",
+        "signature": "d255988cf866270a1dc9a67e9b7ff5ecf6595d77a04987136fddfd84f0e63a3d",
         "affectsGlobalScope": false
       },
       "./src/modules/booking/booking.module.ts": {
-        "version": "f6ffb58a649dde441b9601515c6051682f6c95da85699ca7140b1b9f1f0cd967",
+        "version": "cc628adaa29b7453c968dd20ad637a1362080319d07320e65f181e675c94ddfa",
         "signature": "307da3f1f46926da44f7648eb8e50e8695fb098723e4ee7b33d6bb54573c7d81",
         "affectsGlobalScope": false
       },
@@ -3305,6 +3320,11 @@
         "version": "e16ba0df24a0c7095df2d82f4e29fa12bfb4a6cb70a5bcb5e5e52319db4f385b",
         "signature": "e16ba0df24a0c7095df2d82f4e29fa12bfb4a6cb70a5bcb5e5e52319db4f385b",
         "affectsGlobalScope": true
+      },
+      "./src/modules/user/controllers/dashboard.controller.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "affectsGlobalScope": false
       },
       "./node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -9868,10 +9888,23 @@
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./src/config/auth.config.ts",
+        "./src/modules/booking/controllers/approval.controller.ts",
         "./src/modules/booking/controllers/booking.controller.ts",
+        "./src/modules/booking/controllers/rejection.controller.ts",
         "./src/modules/booking/entities/booking.entity.ts",
         "./src/modules/booking/services/booking.service.ts",
         "./src/shared/providers/jwt/jwt.provider.ts"
+      ],
+      "./src/modules/booking/controllers/approval.controller.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./src/modules/booking/entities/booking.entity.ts",
+        "./src/modules/booking/services/booking.service.ts",
+        "./src/shared/providers/jwt/jwt.guard.ts"
       ],
       "./src/modules/booking/controllers/booking.controller.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
@@ -9884,6 +9917,24 @@
         "./src/modules/booking/entities/booking.entity.ts",
         "./src/modules/booking/services/booking.service.ts",
         "./src/shared/providers/jwt/jwt.guard.ts"
+      ],
+      "./src/modules/booking/controllers/rejection.controller.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./src/modules/booking/entities/booking.entity.ts",
+        "./src/modules/booking/services/booking.service.ts",
+        "./src/shared/providers/jwt/jwt.guard.ts"
+      ],
+      "./src/modules/booking/dtos/update-booking.dto.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
+        "./node_modules/@types/node/util.d.ts"
       ],
       "./src/modules/booking/entities/booking.entity.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -9904,6 +9955,7 @@
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/typeorm/index.d.ts",
+        "./src/modules/booking/dtos/update-booking.dto.ts",
         "./src/modules/booking/entities/booking.entity.ts"
       ],
       "./src/modules/spot/controllers/spot.controller.ts": [
@@ -9983,6 +10035,13 @@
         "./src/modules/spot/entities/spot.entity.ts",
         "./src/modules/spot/services/spot.service.ts",
         "./src/shared/providers/jwt/jwt.provider.ts"
+      ],
+      "./src/modules/user/controllers/dashboard.controller.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts",
+        "./node_modules/@types/node/util.d.ts"
       ],
       "./src/modules/user/controllers/session.controller.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
@@ -16411,8 +16470,16 @@
       "./src/config/upload.config.ts": [
         "./node_modules/@types/multer/index.d.ts"
       ],
+      "./src/modules/booking/controllers/approval.controller.ts": [
+        "./src/modules/booking/entities/booking.entity.ts",
+        "./src/modules/booking/services/booking.service.ts"
+      ],
       "./src/modules/booking/controllers/booking.controller.ts": [
         "./node_modules/@types/express/index.d.ts",
+        "./src/modules/booking/entities/booking.entity.ts",
+        "./src/modules/booking/services/booking.service.ts"
+      ],
+      "./src/modules/booking/controllers/rejection.controller.ts": [
         "./src/modules/booking/entities/booking.entity.ts",
         "./src/modules/booking/services/booking.service.ts"
       ],
@@ -16422,6 +16489,7 @@
       ],
       "./src/modules/booking/services/booking.service.ts": [
         "./node_modules/typeorm/index.d.ts",
+        "./src/modules/booking/dtos/update-booking.dto.ts",
         "./src/modules/booking/entities/booking.entity.ts"
       ],
       "./src/modules/spot/controllers/spot.controller.ts": [
@@ -17170,7 +17238,10 @@
       "./src/config/upload.config.ts",
       "./src/main.ts",
       "./src/modules/booking/booking.module.ts",
+      "./src/modules/booking/controllers/approval.controller.ts",
       "./src/modules/booking/controllers/booking.controller.ts",
+      "./src/modules/booking/controllers/rejection.controller.ts",
+      "./src/modules/booking/dtos/update-booking.dto.ts",
       "./src/modules/booking/entities/booking.entity.ts",
       "./src/modules/booking/services/booking.service.ts",
       "./src/modules/spot/controllers/spot.controller.ts",
@@ -17180,6 +17251,7 @@
       "./src/modules/spot/pipes/parse-spot-techs.pipe.ts",
       "./src/modules/spot/services/spot.service.ts",
       "./src/modules/spot/spot.module.ts",
+      "./src/modules/user/controllers/dashboard.controller.ts",
       "./src/modules/user/controllers/session.controller.ts",
       "./src/modules/user/controllers/user.controller.ts",
       "./src/modules/user/dtos/create-session.dto.ts",

@@ -1,4 +1,4 @@
-import { Controller, Body, UseGuards, Post, Request } from '@nestjs/common'
+import { Controller, Body, UseGuards, Post, Request, Param } from '@nestjs/common'
 
 import { Request as Req } from 'express'
 
@@ -7,7 +7,7 @@ import { JwtAuthGuard } from '@shared/providers/jwt/jwt.guard'
 import { Booking } from '../entities/booking.entity'
 import { BookingService } from '../services/booking.service'
 
-@Controller('/bookings')
+@Controller('/spots/:spot_id/bookings')
 export class BookingController {
   constructor(
     private bookingService: BookingService
@@ -17,13 +17,15 @@ export class BookingController {
   @Post('/')
   async store(
     @Request() request: Req,
-    @Body() model: Booking
+    @Body() model: Booking,
+    @Param('spot_id') spotId: string
   ): Promise<Booking> {
     const userId = request.user.id
-    const spot = await this.bookingService.create({
+    const booking = await this.bookingService.create({
       ...model,
-      userId
+      userId,
+      spotId
     })
-    return spot
+    return booking
   }
 }
