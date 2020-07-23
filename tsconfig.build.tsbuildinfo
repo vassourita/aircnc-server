@@ -1406,11 +1406,6 @@
         "signature": "26d590f7fc94dc8bd476aab67a6047b39a72b0dcbdb7c5ce1dbd369762d63e4f",
         "affectsGlobalScope": false
       },
-      "./src/entity/User.ts": {
-        "version": "3126c1387569a88a1daf88459672e2528137dfeed96736176c2fd6dd42e2a7f9",
-        "signature": "9631025fba6d494643ecbab085fbc91680081552d963905740e500ee65afce48",
-        "affectsGlobalScope": false
-      },
       "./src/index.ts": {
         "version": "67ea39a7ee331c5e8923d17c55ddfe7eeab1f8a8db43e7042401fdd0c2b39f66",
         "signature": "99d24f064aeae9497bd0f6ecdff22b392fa7425bf93b674a9b91c338d494ea8a",
@@ -9879,14 +9874,6 @@
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts"
       ],
-      "./src/entity/User.ts": [
-        "./node_modules/@types/graceful-fs/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.2/fs.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/typeorm/index.d.ts"
-      ],
       "./src/index.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
@@ -9894,8 +9881,7 @@
         "./node_modules/@types/node/ts3.2/util.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/reflect-metadata/index.d.ts",
-        "./node_modules/typeorm/index.d.ts",
-        "./src/entity/User.ts"
+        "./node_modules/typeorm/index.d.ts"
       ],
       "./src/main.ts": [
         "./node_modules/@nestjs/core/index.d.ts",
@@ -17278,8 +17264,19 @@
       "./src/config/auth.config.ts",
       "./src/config/typeorm.config.ts",
       "./src/config/upload.config.ts",
-      "./src/entity/User.ts",
-      "./src/index.ts",
+      [
+        "./src/index.ts",
+        [
+          {
+            "file": "./src/index.ts",
+            "start": 88,
+            "length": 15,
+            "messageText": "Cannot find module './entity/User' or its corresponding type declarations.",
+            "category": 1,
+            "code": 2307
+          }
+        ]
+      ],
       "./src/main.ts",
       "./src/modules/booking/booking.module.ts",
       "./src/modules/booking/controllers/approval.controller.ts",
