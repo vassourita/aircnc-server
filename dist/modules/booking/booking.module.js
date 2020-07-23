@@ -11,6 +11,7 @@ const common_1 = require("@nestjs/common");
 const jwt_1 = require("@nestjs/jwt");
 const typeorm_1 = require("@nestjs/typeorm");
 const auth_config_1 = require("../../config/auth.config");
+const spot_entity_1 = require("../spot/entities/spot.entity");
 const jwt_provider_1 = require("../../shared/providers/jwt/jwt.provider");
 const approval_controller_1 = require("./controllers/approval.controller");
 const booking_controller_1 = require("./controllers/booking.controller");
@@ -22,7 +23,7 @@ let BookingModule = class BookingModule {
 BookingModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([booking_entity_1.Booking]),
+            typeorm_1.TypeOrmModule.forFeature([booking_entity_1.Booking, spot_entity_1.Spot]),
             jwt_1.JwtModule.register(auth_config_1.authConfig.jwt)
         ],
         controllers: [booking_controller_1.BookingController, approval_controller_1.ApprovalController, rejection_controller_1.RejectionController],

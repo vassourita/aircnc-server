@@ -9,6 +9,6 @@ export const typeormConfig: TypeOrmModuleOptions = {
   database: 'aircnc',
   logging: 'all',
   entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
-  autoLoadEntities: true,
-  synchronize: true
+  autoLoadEntities: true
+  // synchronize: true
 }

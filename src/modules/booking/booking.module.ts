@@ -3,6 +3,7 @@ import { JwtModule } from '@nestjs/jwt'
 import { TypeOrmModule } from '@nestjs/typeorm'
 
 import { authConfig } from '@config/auth.config'
+import { Spot } from '@modules/spot/entities/spot.entity'
 import { JwtStrategy } from '@shared/providers/jwt/jwt.provider'
 
 import { ApprovalController } from './controllers/approval.controller'
@@ -13,7 +14,7 @@ import { BookingService } from './services/booking.service'
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Booking]),
+    TypeOrmModule.forFeature([Booking, Spot]),
     JwtModule.register(authConfig.jwt)
   ],
   controllers: [BookingController, ApprovalController, RejectionController],
