@@ -8,13 +8,13 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Column()
+  @Column({ length: 80 })
   name: string
 
   @Column({ unique: true })
   email: string
 
-  @Column()
+  @Column({ length: 255 })
   password: string
 
   @OneToMany(() => Spot, spot => spot.user)

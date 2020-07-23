@@ -7,6 +7,7 @@ import { authConfig } from '@config/auth.config'
 import { uploadConfig } from '@config/upload.config'
 import { JwtStrategy } from '@shared/providers/jwt/jwt.provider'
 
+import { DashboardController } from './controllers/dashboard.controller'
 import { SpotController } from './controllers/spot.controller'
 import { Spot } from './entities/spot.entity'
 import { SpotService } from './services/spot.service'
@@ -20,7 +21,7 @@ import { SpotService } from './services/spot.service'
       storage: uploadConfig.storage
     })
   ],
-  controllers: [SpotController],
+  controllers: [SpotController, DashboardController],
   providers: [SpotService, JwtStrategy]
 })
 export class SpotModule { }

@@ -8,16 +8,16 @@ export class Spot {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Column()
+  @Column({ length: 80 })
   thumbnail: string
 
-  @Column()
+  @Column({ length: 80 })
   company: string
 
   @Column('decimal')
   price: number
 
-  @Column('text', { array: true })
+  @Column('varchar', { array: true, length: 80 })
   techs: string[]
 
   @Column('uuid')

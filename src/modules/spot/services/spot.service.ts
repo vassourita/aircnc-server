@@ -20,6 +20,12 @@ export class SpotService {
       .getMany()
   }
 
+  findByUser(userId: string): Promise<Spot[]> {
+    return this.spotsRepository.find({
+      where: { userId }
+    })
+  }
+
   async create(model: ICreateSpotDTO): Promise<Spot> {
     const spot = this.spotsRepository.create(model)
     await this.spotsRepository.save(spot)

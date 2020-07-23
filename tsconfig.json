@@ -1,41 +1,41 @@
 {
-  "include": [
-    "src/**/*"
-  ],
-  "compilerOptions": {
-    "module": "commonjs",
-    "lib": [
-      "ES6"
-    ],
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "baseUrl": "./",
-    "resolveJsonModule": true,
-    "incremental": true,
-    "forceConsistentCasingInFileNames": true,
-    "strictPropertyInitialization": false,
-    "esModuleInterop": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ],
-    "paths": {
-      "@modules/*": [
-        "src/modules/*"
+   "include": [
+      "src/**/*"
+   ],
+   "compilerOptions": {
+      "module": "commonjs",
+      "lib": [
+         "ES6"
       ],
-      "@shared/*": [
-        "src/shared/*"
+      "declaration": true,
+      "removeComments": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es2017",
+      "sourceMap": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "baseUrl": "./",
+      "resolveJsonModule": true,
+      "incremental": true,
+      "forceConsistentCasingInFileNames": true,
+      "strictPropertyInitialization": false,
+      "esModuleInterop": true,
+      "typeRoots": [
+         "./node_modules/@types",
+         "./src/@types"
       ],
-      "@config/*": [
-        "src/config/*"
-      ]
-    }
-  }
+      "paths": {
+         "@modules/*": [
+            "src/modules/*"
+         ],
+         "@shared/*": [
+            "src/shared/*"
+         ],
+         "@config/*": [
+            "src/config/*"
+         ]
+      }
+   }
 }
