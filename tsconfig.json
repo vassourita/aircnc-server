@@ -18,7 +18,6 @@
       "rootDir": "./src",
       "baseUrl": "./",
       "resolveJsonModule": true,
-      "incremental": true,
       "forceConsistentCasingInFileNames": true,
       "strictPropertyInitialization": false,
       "esModuleInterop": true,
