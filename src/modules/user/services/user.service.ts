@@ -23,13 +23,15 @@ export class UserService {
 
   findOneByEmail(email: string): Promise<User> {
     return this.usersRepository.findOne({
-      where: { email }
+      where: { email },
+      select: ['email', 'password', 'id']
     })
   }
 
   async create(model: ICreateUserDTO): Promise<User> {
     const user = this.usersRepository.create(model)
     await this.usersRepository.save(user)
+    delete user.password
     return user
   }
 
