@@ -12,4 +12,7 @@ services:
       POSTGRES_USER: docker
       POSTGRES_DB: aircnc
     volumes:
-      - /var/lib/postgresql/data
+      - db_data:/var/lib/postgresql
+
+volumes:
+  db_data:

@@ -3027,7 +3027,7 @@
         "affectsGlobalScope": false
       },
       "./src/config/typeorm.config.ts": {
-        "version": "d46449596f5a921dd2dce45a1c69dd8dbc3c7cfdccf705046be0c60bb42539f4",
+        "version": "4314c4b8d0a8bb66f2af17f6568b31e4fe68f71620a999bf6fc149bdd00b224f",
         "signature": "5d86921e9694979be25ad8bad5157ec741f0df155f2077952b2d147feabdb2ee",
         "affectsGlobalScope": false
       },
